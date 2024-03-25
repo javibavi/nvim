@@ -15,6 +15,7 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"tsserver", -- tsserver is for javascript (you never know when you gotta write in that awful language)
+					"pyright",
 				}
 			})
 		end
@@ -27,6 +28,7 @@ return {
 			-- Call the setup function for every LSP you have installed
 			lspconfig.lua_ls.setup({})
 			lspconfig.tsserver.setup({})
+			lspconfig.pyright.setup({})
 			-- Keybindings for LSP actions
 			vim.keymap.set('n', "K", vim.lsp.buf.hover, {})
 			vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
