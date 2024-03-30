@@ -1,9 +1,9 @@
 return {
 	-- This is the colorscheme plugin
 	"folke/tokyonight.nvim",
-  	lazy = false,
-  	priority = 1000,
-  	opts = {},
+	lazy = false,
+	priority = 1000,
+	opts = {},
 
 	config = function()
 		-- Sets the color scheme of the editor
@@ -14,9 +14,9 @@ return {
 			terminal_colors = true,
 
 			styles = {
-				comments = {italic = true}
+				comments = { italic = true },
 			},
 		})
-		vim.cmd[[colorscheme tokyonight]]
-	end
+		vim.cmd([[colorscheme tokyonight]])
+	end,
 }

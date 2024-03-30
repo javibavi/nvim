@@ -14,6 +14,7 @@ return {
 		"hrsh7th/nvim-cmp",
 		config = function()
 			-- Set up nvim-cmp.
+			-- This function is used to allow the tab button to be used for cycling through autocompletion
 			local has_words_before = function()
 				unpack = unpack or table.unpack
 				local line, col = unpack(vim.api.nvim_win_get_cursor(0))
