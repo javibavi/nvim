@@ -1,18 +1,17 @@
+-- Plugin that gives a pop up with a list of all possible commands
 return {
 	"folke/which-key.nvim",
+
+	-- We lazy load this plugin
 	event = "VeryLazy",
 	init = function()
 		vim.o.timeout = true
 		vim.o.timeoutlen = 300
 	end,
-	opts = {
-		-- your configuration comes here
-		-- or leave it empty to use the default settings
-		-- refer to the configuration section below
-	},
 	config = function()
 		local wk = require("which-key")
 
+		-- This table creates the descriptions for each keybind
 		wk.register({
 			f = {
 				name = "Find",

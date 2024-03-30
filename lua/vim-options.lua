@@ -7,5 +7,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "number"
 
+vim.opt.smartindent = false
+
 -- Sets the leader key to space
 vim.g.mapleader = " "

@@ -33,6 +33,7 @@ return {
 			require("telescope").load_extension("ui-select")
 		end,
 	},
+	-- Plugin used to look at the register history through telescope
 	{
 		"AckslD/nvim-neoclip.lua",
 		config = function()

@@ -3,6 +3,7 @@ return {
 	"nvimdev/dashboard-nvim",
 	event = "VimEnter",
 	config = function()
+		-- Command to open dashboard
 		vim.keymap.set("n", "<leader>d", ":Dashboard<CR>", {})
 		require("dashboard").setup({
 			theme = "doom",

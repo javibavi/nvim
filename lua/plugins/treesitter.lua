@@ -6,7 +6,7 @@ return {
 		-- Gives us access to the functions to config treesitter
 		local config = require("nvim-treesitter.configs")
 		config.setup({
-			-- Ensures we have syntax highlighting installed for the following languages
+			-- Ensures we have syntax highlighting installed for any language we encounter
 			auto_install = true,
 
 			-- Enables highlighting and indenting

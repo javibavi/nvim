@@ -1,3 +1,4 @@
+-- This is the file responsible for autocompletion
 return {
 	{
 		"hrsh7th/cmp-nvim-lsp",
@@ -23,6 +24,12 @@ return {
 			end
 			local luasnip = require("luasnip")
 			local cmp = require("cmp")
+
+			-- This ensures that autopairs are used whenever a function is selected
+			local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+			cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+
+			-- Creates a VSCode like experience with the completion engine
 			require("luasnip.loaders.from_vscode").lazy_load()
 
 			cmp.setup({
@@ -38,6 +45,7 @@ return {
 				},
 				mapping = cmp.mapping.preset.insert({
 
+					-- This is all so that we can tab whenever we want to use autocompletion
 					["<Tab>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then
 							cmp.select_next_item()
