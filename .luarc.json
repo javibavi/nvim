@@ -1,6 +1,5 @@
 {
     "diagnostics.globals": [
         "vim",
-        "open_dashboard_if_no_buf_open"
     ]
 }

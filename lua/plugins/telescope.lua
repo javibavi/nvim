@@ -20,7 +20,7 @@ return {
 			-- This is your opts table
 			require("telescope").setup({
 				extensions = {
-				["ui-select"] = {
+					["ui-select"] = {
 						require("telescope.themes").get_dropdown({
 							-- even more opts
 						}),

@@ -1,4 +1,4 @@
--- Used to enable autopairs
+-- Used to enable autopairs (which is whenever parentheses and brackets get autocompleted)
 return {
 	"windwp/nvim-autopairs",
 	event = "InsertEnter",
