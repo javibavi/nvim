@@ -6,6 +6,7 @@ return {
 	config = function()
 		require("trouble").setup({
 			position = "right",
+			width = 70,
 		})
 		vim.keymap.set("n", "<leader>xw", function()
 			require("trouble").toggle("workspace_diagnostics")
