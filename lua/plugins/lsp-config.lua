@@ -14,7 +14,6 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"tsserver", -- tsserver is for javascript (you never know when you gotta write in that awful language)
 					"pyright",
 					"clangd",
 				},
@@ -30,7 +29,6 @@ return {
 			local lspconfig = require("lspconfig")
 			-- Call the setup function for every LSP you have installed
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
-			lspconfig.tsserver.setup({ capabilities = capabilities })
 			lspconfig.pyright.setup({ capabilities = capabilities })
 			lspconfig.clangd.setup{
 				cmd = {
