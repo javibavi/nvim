@@ -1,3 +1,4 @@
+-- Plugin that basically gives me everything I would want from a mouse but with the keyboard
 return {
 	"ggandor/leap.nvim",
 	dependencies = {

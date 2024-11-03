@@ -16,6 +16,7 @@ return {
 					"lua_ls",
 					"tsserver", -- tsserver is for javascript (you never know when you gotta write in that awful language)
 					"pyright",
+					"clangd",
 				},
 			})
 		end,
@@ -31,6 +32,12 @@ return {
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.tsserver.setup({ capabilities = capabilities })
 			lspconfig.pyright.setup({ capabilities = capabilities })
+			lspconfig.clangd.setup{
+				cmd = {
+					"clangd",
+					"--fallback-style=webkit"
+				},
+			}
 			-- Keybindings for LSP actions
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
