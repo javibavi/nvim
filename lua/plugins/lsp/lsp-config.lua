@@ -36,10 +36,6 @@ return {
 					"--fallback-style=webkit"
 				},
 			}
-			-- Keybindings for LSP actions
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-			vim.keymap.set({ "n", "v" }, "<leader>fa", vim.lsp.buf.code_action, {})
 		end,
 	},
 }

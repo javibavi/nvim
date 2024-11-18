@@ -20,8 +20,5 @@ return {
                 null_ls.builtins.formatting.clang_format,
             },
         })
-        -- This keymap sets our file to follow coding conventions for whatever language is in our active buffer
-        -- For Lua, this will turn all single quotes to double quotes
-        vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
     end,
 }
