@@ -25,18 +25,4 @@ return {
 			require("telescope").load_extension("ui-select")
 		end,
 	},
-	-- Plugin used to look at the register history through telescope
-	{
-		"AckslD/nvim-neoclip.lua",
-		config = function()
-			require("neoclip").setup()
-		end,
-	},
-	-- Plugin used to look at the undo history through telescope
-	{
-		"debugloop/telescope-undo.nvim",
-	},
-	config = function()
-		require("telescope").load_extension("undo")
-	end,
 }

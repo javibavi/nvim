@@ -37,29 +37,32 @@ map("n", "<leader>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
 map("n", "<leader>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
 
 -- Open Dashboard
-map("n", "<leader>h", ":Dashboard<CR>", {})
+map("n", "<leader>h", "<cmd>Dashboard<CR>", {})
 
 -- LSP Keybindings
-map("n", "K", ":lua vim.lsp.buf.hover()<CR>", opts)
-map("n", "<leader>gd", ":lua vim.lsp.buf.definition()<CR>", opts)
-map("n", "<leader>fa", ":lua vim.lsp.buf.code_action()<CR>", opts)
-map("n", "<leader>gf", ":lua vim.lsp.buf.format()<CR>", opts)
+map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+map("n", "<leader>fa", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+map("n", "gf", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
 
--- Neotree Bindings
--- Sets a keymap to allow us to open/close neotree on the right
-map("n", "<leader>nr", ":Neotree filesystem toggle right<CR>", opts)
--- Sets a keymap to allow us to focus on the tree if it is open
-map("n", "<leader>nf", ":Neotree filesystem focus right<CR>", opts)
+-- Nvimtree mappings
+map("n", "<leader>n", "<cmd>NvimTreeToggle <CR>", opts)
 
 -- Telescope Bindings
 -- Loads the default keys for telescope
-map("n", "<leader>ff", ":Telescope find_files<CR>", {})
-map("n", "<leader>fg", ":Telescope live_grep<CR>", {})
-map("n", "<leader>fb", ":Telescope buffers<CR>", {})
-map("n", "<leader>fh", ":Telescope help_tags<CR>", {})
-map("n", "<leader>fu", ":Telescope undo<CR>", {})
--- Keybinding to look through clipboard for telescope
-map("n", "<leader>fr", ":Telescope neoclip a extra=star,plus,b <CR>", {})
+map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", {})
+map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", {})
+map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", {})
+map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", {})
+map("n", "<leader>fn", "<cmd>Telescope notify<CR>",{})
 
--- Trouble Keybindings
+-- Spectre bindings
+map("n", "<leader>T", '<cmd>lua require("spectre").toggle()<CR>', {
+	desc = "Toggle Spectre",
+})
+map("n", "<leader>tp", '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
+	desc = "Search on current file",
+})
+
+
 -- TODO: reset the keybindings because trouble was updated

@@ -16,6 +16,8 @@ return {
 					"lua_ls",
 					"pyright",
 					"clangd",
+					"jsonls",
+					"jdtls",
 				},
 			})
 		end,
@@ -30,12 +32,15 @@ return {
 			-- Call the setup function for every LSP you have installed
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.pyright.setup({ capabilities = capabilities })
-			lspconfig.clangd.setup{
+			lspconfig.clangd.setup({
+				capabilities = capabilities,
 				cmd = {
 					"clangd",
-					"--fallback-style=webkit"
+					"--fallback-style=webkit",
 				},
-			}
+			})
+			lspconfig.jsonls.setup({ capabilities = capabilities })
+			lspconfig.jdtls.setup({ capabilities = capabilities })
 		end,
 	},
 }

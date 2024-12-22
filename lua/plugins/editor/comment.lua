@@ -5,7 +5,7 @@ return {
 		toggler = {
 			---Line-comment toggle keymap
 			line = "<leader>cl",
-			-- -Block-comment toggle keymap
+			---Block-comment toggle keymap
 			block = "<leader>cb",
 		},
 		---LHS of operator-pending mappings in NORMAL and VISUAL mode
@@ -28,9 +28,9 @@ return {
 		---NOTE: If given `false` then the plugin won't create any mappings
 		mappings = {
 			---Operator-pending mapping; `gcc` `gbc` `gc[count]{motion}` `gb[count]{motion}`
-			basic = true,
+			basic = false,
 			---Extra mapping; `gco`, `gcO`, `gcA`
-			extra = true,
+			extra = false,
 		},
 	},
 	lazy = false,
